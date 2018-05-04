@@ -557,7 +557,7 @@ CensusPop <- subset(CensusPop, select = -c(USPS, ALAND, AWATER))
 
 # We can now get the travel time to Carpinteria per census tract using Google Maps API for car, public transport, and bike. Please note that since there is a limit of 2,500 calls to Google Maps API per day, you may have problems with this in larger market areas. Make sure you have install.packages(gmapsdistance) and you have registered for a Google Maps API Key at https://developers.google.com/maps/documentation/distance-matrix/get-api-key#key. Then make sure you run the command set.api.key("YOUR KEY HERE") 
 
-
+set.api.key("AIzaSyC2gnvLvWF7eNpW3Vhplj6PAk1mByUJJn4")
 tomorrow <- as.character(Sys.Date() + 1)
 DriveTime <- gmapsdistance(origin = CensusPop$GoogleInput, 
                                      destination = "410+Palm+Ave,+Carpinteria,+CA+93013",
